@@ -30,7 +30,8 @@
     //    Hint: there is a string literal that represents empty
     //
     
-    self.agentNameTextField.text = @"Agent Name";
+    self.agentNameTextField.text = nil;
+    self.agentPasswordTextField.text = nil;
     self.greetingLabel.text = nil;
     self.missionBriefingTextView.text = nil;
 }
@@ -52,7 +53,7 @@
     //
     // 2. Check whether there is text in BOTH the name and password textfields
     //
-    if (self.agentNameTextField != nil && self.agentPasswordTextField != nil )
+    if (![self.agentNameTextField.text isEqualToString:@""] && ![self.agentPasswordTextField.text isEqualToString:@""] )
     {
         //
         // 3. The greetingLabel needs to be populated with the the string "Good evening, Agent #", where # is the last name of
@@ -68,7 +69,7 @@
         NSString *agentName = self.agentNameTextField.text;
         NSString *firstName = [[agentName componentsSeparatedByString:@" "] objectAtIndex:0];
         NSString *lastName = [agentName substringFromIndex:[agentName rangeOfString:firstName].length + 1];
-        NSString *specialGreeting = [[@"GOOD EVENING AGENT " stringByAppendingString:lastName] stringByAppendingString:@"!"];
+        NSString *specialGreeting = [[@"GOOD EVENING, AGENT " stringByAppendingString:lastName] stringByAppendingString:@"!"];
         self.greetingLabel.text = specialGreeting;
         
         //
