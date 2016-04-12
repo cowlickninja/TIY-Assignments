@@ -30,18 +30,21 @@
     //
     // 3. Set the title of the view to "NOC List"
     //
-    
+    self.navigationItem.title = @"NOC List";
     
     //
     // 4. Initialize the agents array as an NSMutableArray
     //
-    self.agents = nil;
+    self.agents = [[NSMutableArray alloc]init];
+    
+    // NICK NOTE: This was in the instructions before I edited it. >> self.agents = nil;
 
     //
     // 5. Call the method loadNocList so the tableview will actually have objects to load into its cells.
     //
-    
-    
+    // NICK NOTE: Learned that you should use a dot for properties and space for calling method
+    [self loadNocList];
+
 }
 
 - (void)loadNocList
@@ -57,13 +60,19 @@
     //    Type in "forin" below. It should offer code completion for a for-in loop. Just hit enter to accept it.
     //    Use the "agents" array from above as the array to iterate over. Create an NSDictionary object on the left side
     //    of the for-in loop. You will use this inside the for loop to create an Agent object.
+    // NICK NOTE: Got help from instructor about all of this.  Review this more to fully understand what happens here.
 
+    for (NSDictionary *agentDictionary in agents) {
+        
+        Agent * theAgent = [Agent agentWithDictionary: agentDictionary];
+        [self.agents addObject:theAgent];
+    }
     
     //
     // 7. Now that we have agent objects, call a method to instruct the table to reload its data.
     //
     
-    
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,18 +88,18 @@
     //
     // 8. We need to set the segue identifier to the same one we used in the segue on the storyboard
     //
-    if ([[segue identifier] isEqualToString:@""])
+    if ([[segue identifier] isEqualToString:@"segueAgentDetail"])
     {
         //
         // 9. We need to get an NSIndexPath for the selected cell
         //
-        NSIndexPath *indexPath = nil;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         
         //
         // 10. Now we're going to use the "row" property of the indexPath from above to pull out the associated Agent object
         //     from the agents array.
         //
-        Agent *selectedAgent = self.agents[0];
+        Agent *selectedAgent = self.agents[indexPath.row];
         
         //
         // 11. Now we need to send this Agent object to the detail view controller so it know's which agent's info to show.
@@ -99,7 +108,11 @@
         //     How would we go about setting this agent object?
         //
         
-//        [segue destinationViewController];
+        //        [segue destinationViewController];
+        // NICK NOTE: Ben helped with this and I have no idea how we came to this.
+        
+        DetailViewController *detailVC = (DetailViewController *)[segue destinationViewController];
+        detailVC.agent = selectedAgent;
     }
 }
 
@@ -114,9 +127,9 @@
 {
     //
     // 12. How do we tell the table view how many rows we need?
-    //
+    // NICK NOTE: done!!
     
-    return 0;
+    return self.agents.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,24 +141,25 @@
     //
     //     The method call below will perform this dequeuing operation. What should we set as the identifier?
     //
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
 
     //
     // 14. We need to get a handle to the appropriate Agent object. How do we do that? (hint: we've done this already ^)
     //
-    Agent *anAgent = nil;
+    Agent *anAgent = self.agents[indexPath.row];
     
     //
     // 15. The cell needs to show both the cover name and the real name of the agent. Since we are using one of the built-in
     //     cell types, the "cell" object above has properties for these two labels already. How do we assign those?
     //
-
+    cell.textLabel.text = anAgent.coverName;
+    cell.detailTextLabel.text = anAgent.realName;
     
     //
     // 16. This method is supposed to give a cell back to its caller. How do we do that? Why is this method currently
     //     throwing an error?
     //
-    
+    return cell;
     
 }
 

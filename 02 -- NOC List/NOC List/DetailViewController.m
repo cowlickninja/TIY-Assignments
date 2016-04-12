@@ -13,13 +13,13 @@
 //
 // 17. By the empty circle to the left of this IBOutlet, it looks like this property is not connected to its storyboard
 //     object. How do we do that?
-//
+//  NICK NOTE: done!
 @property (weak, nonatomic) IBOutlet UILabel *coverNameLabel;
 
 //
 // 18. We need properties for the other two labels here so we can reference them in code.
-//
-
+@property (weak, nonatomic) IBOutlet UILabel *realNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accessLevelLabel;
 // Why is this here?
 - (void)configureView;
 
@@ -52,14 +52,15 @@
         //
         //     (hint: We did something similar to this in HW 1)
         //
-        
+        NSString *agentName = self.agent.coverName;
+        NSArray *nameArray = [agentName componentsSeparatedByString:@" "];
         
         
         //
         // 20. Once we have the last name of the agent from the code above, how do we set the view's title to the right
         //     string?
         //
-        
+        self.navigationItem.title = [NSString stringWithFormat:@"Agent %@", [nameArray lastObject]];
         
         
         //
@@ -68,8 +69,9 @@
         //     The level label will be a little trickier, because the level property is an NSInteger. We also want that label
         //     to read "Level #". How do we do that?
         //
-
-        
+        self.realNameLabel.text = [NSString stringWithFormat:@"Real Name: %@", self.agent.realName ];
+        self.coverNameLabel.text = [NSString stringWithFormat:@"Cover Name: %@", self.agent.coverName];
+        self.accessLevelLabel.text = [NSString stringWithFormat:@"Level # %i", (int)self.agent.accessLevel ];
         
         
     }
@@ -84,7 +86,7 @@
     // 22. We need to make sure to call the configureView method so the detail view will be populated with the agent's data.
     //     How do we do that?
     //
-    
+    [self configureView];
     
 }
 
