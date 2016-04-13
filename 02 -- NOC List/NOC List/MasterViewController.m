@@ -86,7 +86,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //
-    // 8. We need to set the segue identifier to the same one we used in the segue on the storyboard
+    // 8. We need to set the segue identifier to the same one we used in the segue on the storyboard. IS THIS THE RIGHT SEGUE IS WHAT IT IS DOING.
     //
     if ([[segue identifier] isEqualToString:@"segueAgentDetail"])
     {
