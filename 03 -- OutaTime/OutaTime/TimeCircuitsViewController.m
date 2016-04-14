@@ -125,6 +125,7 @@ NSInteger currentSpeedofDelorean;
     //    there a method defined that will allow us to get the timer started?
     //
     [self startTimer];
+    // NICK NOTE: disables interaction from the user while time travel is being attempted.
     self.view.userInteractionEnabled = NO;
 }
 
@@ -214,7 +215,7 @@ NSInteger currentSpeedofDelorean;
         [self reduceSpeed];
     }
 }
-
+// NICK NOTE this function was added to the project to reduce the speedometer number after time travel destination has been reached. Hit the clock tower!
 - (void)reduceSpeed
 {
     
@@ -226,6 +227,7 @@ NSInteger currentSpeedofDelorean;
     }
     else{
         [self stopTimer];
+        // re-enables interaction from the user.
         self.view.userInteractionEnabled = YES;
     }
 }
