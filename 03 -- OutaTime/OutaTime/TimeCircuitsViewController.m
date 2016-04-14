@@ -36,6 +36,8 @@ NSInteger currentSpeedofDelorean;
 - (void)startTimer;
 - (void)stopTimer;
 - (void)updateSpeed;
+- (void)decreaseTimer;
+- (void)reduceSpeed;
 
 @end
 
@@ -123,6 +125,7 @@ NSInteger currentSpeedofDelorean;
     //    there a method defined that will allow us to get the timer started?
     //
     [self startTimer];
+    self.view.userInteractionEnabled = NO;
 }
 
 #pragma mark - Private
@@ -148,6 +151,17 @@ NSInteger currentSpeedofDelorean;
                                                          selector:@selector(updateSpeed)
                                                          userInfo:nil                                           repeats:YES];
         
+    }
+}
+
+- (void)decreaseTimer
+{
+    if (!timer)
+    {
+        timer = [NSTimer scheduledTimerWithTimeInterval:-0.01
+                                                 target:self
+                                               selector:@selector(reduceSpeed)
+                                               userInfo:nil                                           repeats:YES];
     }
 }
 
@@ -196,9 +210,23 @@ NSInteger currentSpeedofDelorean;
         //
         // 23. Lastly, we need to reset the current speed label to 0 here.
         //
-        currentSpeedofDelorean = 0;
-        self.speedLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)currentSpeedofDelorean];
         
+        [self reduceSpeed];
+    }
+}
+
+- (void)reduceSpeed
+{
+    
+    if (currentSpeedofDelorean != 0)
+    {
+        [self decreaseTimer];
+        currentSpeedofDelorean = currentSpeedofDelorean-1;
+        self.speedLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)currentSpeedofDelorean];
+    }
+    else{
+        [self stopTimer];
+        self.view.userInteractionEnabled = YES;
     }
 }
 
