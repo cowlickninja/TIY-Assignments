@@ -84,6 +84,9 @@
                                         <exclude reference="GRe-jW-dam"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="-150" width="600" height="175"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1G-YT-Utp" userLabel="divisionLineView">
                                 <rect key="frame" x="0.0" y="125" width="600" height="85"/>
@@ -99,7 +102,7 @@
                                         <state key="normal" title="÷">
                                             <color key="titleColor" red="0.30588235289999999" green="0.6705882353" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="450" y="0.0" width="150" height="85"/>
                                         </variation>
                                         <connections>
@@ -117,7 +120,7 @@
                                         <state key="normal" title="%">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="430" y="0.0" width="85" height="85"/>
                                         </variation>
                                     </button>
@@ -132,7 +135,7 @@
                                         <state key="normal" title="()">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="387" y="0.0" width="150" height="85"/>
                                         </variation>
                                     </button>
@@ -147,7 +150,7 @@
                                         <state key="normal" title="+/−">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="240" y="0.0" width="150" height="85"/>
                                         </variation>
                                     </button>
@@ -288,6 +291,17 @@
                                         <exclude reference="IXA-dv-pzA"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="7WX-7F-SAG"/>
+                                        <exclude reference="CvU-Xr-iG5"/>
+                                        <exclude reference="KlB-29-go9"/>
+                                        <exclude reference="LFv-oh-wrp"/>
+                                        <exclude reference="sIZ-wO-ySv"/>
+                                        <exclude reference="zfj-H3-Kry"/>
+                                        <exclude reference="CP8-y0-ASj"/>
+                                        <exclude reference="dVh-z0-HVP"/>
+                                        <exclude reference="gX3-jj-ifc"/>
+                                        <exclude reference="gvT-5Q-eaR"/>
+                                        <exclude reference="hUm-LX-1wW"/>
                                         <exclude reference="BmF-RB-85r"/>
                                         <exclude reference="SXM-OW-Tcz"/>
                                         <exclude reference="XoK-R7-h17"/>
@@ -296,17 +310,6 @@
                                         <exclude reference="nnF-f9-DUV"/>
                                         <exclude reference="oSw-Q1-y2J"/>
                                         <exclude reference="sak-ie-jLq"/>
-                                        <exclude reference="CP8-y0-ASj"/>
-                                        <exclude reference="dVh-z0-HVP"/>
-                                        <exclude reference="gX3-jj-ifc"/>
-                                        <exclude reference="gvT-5Q-eaR"/>
-                                        <exclude reference="hUm-LX-1wW"/>
-                                        <exclude reference="7WX-7F-SAG"/>
-                                        <exclude reference="CvU-Xr-iG5"/>
-                                        <exclude reference="KlB-29-go9"/>
-                                        <exclude reference="LFv-oh-wrp"/>
-                                        <exclude reference="sIZ-wO-ySv"/>
-                                        <exclude reference="zfj-H3-Kry"/>
                                         <exclude reference="DMX-pe-CsW"/>
                                         <exclude reference="JKN-b7-TEH"/>
                                         <exclude reference="fHA-zI-79a"/>
@@ -332,6 +335,17 @@
                                         <include reference="IXA-dv-pzA"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="7WX-7F-SAG"/>
+                                        <exclude reference="CvU-Xr-iG5"/>
+                                        <include reference="KlB-29-go9"/>
+                                        <exclude reference="LFv-oh-wrp"/>
+                                        <include reference="sIZ-wO-ySv"/>
+                                        <include reference="zfj-H3-Kry"/>
+                                        <include reference="CP8-y0-ASj"/>
+                                        <include reference="dVh-z0-HVP"/>
+                                        <exclude reference="gX3-jj-ifc"/>
+                                        <include reference="gvT-5Q-eaR"/>
+                                        <exclude reference="hUm-LX-1wW"/>
                                         <exclude reference="BmF-RB-85r"/>
                                         <exclude reference="SXM-OW-Tcz"/>
                                         <exclude reference="XoK-R7-h17"/>
@@ -340,17 +354,6 @@
                                         <include reference="nnF-f9-DUV"/>
                                         <exclude reference="oSw-Q1-y2J"/>
                                         <exclude reference="sak-ie-jLq"/>
-                                        <include reference="CP8-y0-ASj"/>
-                                        <include reference="dVh-z0-HVP"/>
-                                        <exclude reference="gX3-jj-ifc"/>
-                                        <include reference="gvT-5Q-eaR"/>
-                                        <exclude reference="hUm-LX-1wW"/>
-                                        <include reference="7WX-7F-SAG"/>
-                                        <exclude reference="CvU-Xr-iG5"/>
-                                        <include reference="KlB-29-go9"/>
-                                        <exclude reference="LFv-oh-wrp"/>
-                                        <include reference="sIZ-wO-ySv"/>
-                                        <include reference="zfj-H3-Kry"/>
                                         <exclude reference="HLT-N0-IE8"/>
                                         <include reference="lW5-rb-eoj"/>
                                         <exclude reference="sgn-8x-JKk"/>
@@ -381,7 +384,7 @@
                                         <state key="normal" title="x">
                                             <color key="titleColor" red="0.81568627449999997" green="0.1647058824" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="450" y="0.0" width="150" height="85"/>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -405,7 +408,7 @@
                                         <state key="normal" title="9">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="405" y="0.0" width="150" height="85"/>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -429,7 +432,7 @@
                                         <state key="normal" title="8">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="345" y="0.0" width="150" height="85"/>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -453,7 +456,7 @@
                                         <state key="normal" title="7">
                                             <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="260" y="0.0" width="85" height="85"/>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -483,7 +486,7 @@
                                                 <exclude reference="Egh-vC-l0g"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=compact" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="175" y="0.0" width="85" height="85"/>
                                             <mask key="constraints">
                                                 <include reference="16h-9B-47r"/>
@@ -588,18 +591,18 @@
                                         <exclude reference="zI8-3N-7IC"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="9ZM-6G-wgc"/>
-                                        <exclude reference="Y5V-qg-Nl6"/>
-                                        <exclude reference="25G-nY-1M7"/>
-                                        <exclude reference="RNh-8C-HP4"/>
-                                        <exclude reference="ZUg-Gp-cfm"/>
-                                        <exclude reference="aV4-rG-ch3"/>
-                                        <exclude reference="jVB-7D-G2l"/>
                                         <exclude reference="0tg-mZ-UcF"/>
                                         <exclude reference="JOk-Mw-WpY"/>
                                         <exclude reference="h7c-Pz-xmt"/>
                                         <exclude reference="pEY-NI-dcS"/>
                                         <exclude reference="pc4-fh-AFE"/>
+                                        <exclude reference="25G-nY-1M7"/>
+                                        <exclude reference="RNh-8C-HP4"/>
+                                        <exclude reference="ZUg-Gp-cfm"/>
+                                        <exclude reference="aV4-rG-ch3"/>
+                                        <exclude reference="jVB-7D-G2l"/>
+                                        <exclude reference="9ZM-6G-wgc"/>
+                                        <exclude reference="Y5V-qg-Nl6"/>
                                         <exclude reference="Jjg-6D-g0t"/>
                                         <exclude reference="plK-W8-5tl"/>
                                         <exclude reference="q6o-m9-uTA"/>
@@ -613,18 +616,18 @@
                                         <include reference="zI8-3N-7IC"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="9ZM-6G-wgc"/>
-                                        <include reference="Y5V-qg-Nl6"/>
-                                        <include reference="25G-nY-1M7"/>
-                                        <include reference="RNh-8C-HP4"/>
-                                        <exclude reference="ZUg-Gp-cfm"/>
-                                        <include reference="aV4-rG-ch3"/>
-                                        <exclude reference="jVB-7D-G2l"/>
                                         <include reference="0tg-mZ-UcF"/>
                                         <include reference="JOk-Mw-WpY"/>
                                         <exclude reference="h7c-Pz-xmt"/>
                                         <include reference="pEY-NI-dcS"/>
                                         <exclude reference="pc4-fh-AFE"/>
+                                        <include reference="25G-nY-1M7"/>
+                                        <include reference="RNh-8C-HP4"/>
+                                        <exclude reference="ZUg-Gp-cfm"/>
+                                        <include reference="aV4-rG-ch3"/>
+                                        <exclude reference="jVB-7D-G2l"/>
+                                        <include reference="9ZM-6G-wgc"/>
+                                        <include reference="Y5V-qg-Nl6"/>
                                         <exclude reference="Jjg-6D-g0t"/>
                                         <exclude reference="LTI-aZ-ZSI"/>
                                         <include reference="plK-W8-5tl"/>
@@ -769,7 +772,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWI-f9-kOz" userLabel="additionView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWI-f9-kOz" userLabel="additionView">
                                 <rect key="frame" x="0.0" y="380" width="600" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-eG-f5o">
@@ -874,7 +877,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="xNE-y3-Irh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZN-vF-Og9" userLabel="equalView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZN-vF-Og9" userLabel="equalView">
                                 <rect key="frame" x="0.0" y="515" width="600" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7i-bk-ifa">

@@ -6,7 +6,7 @@
 	[x] When first initilizing app when you hit the equal button no sum is displayed. But, if you hit Clear button it will return a sum.
 	[x] Returning floating number when sum is hit.
 	[x] After hitting equal and you enter a new operand to begin a new calculation no number is displayed in the label.
-	[x] When you hit decimal and operand no 0 is displayed. .3, but need 0.3
+	[ ] When you hit decimal and operand no 0 is displayed. .3, but need 0.3
 
 	
 	
@@ -16,7 +16,7 @@
 	[x] Check clear button function to see what it is doing that when the app is loaded it is not doing. Add that functionality.
 	[x] I need to remove all trailing zeros when it is a whole number by asking it to not return zeros as a float.
 	[x] Not sure what is causing this problem. Maybe it is not resetting the brain?
-	[x] To fix I need to add a 0 to the output of if the button . is pressed. If an output isn't available I need to add it probably since it is doing nothing.
+	[ ] To fix I need to add a 0 to the output of if the button . is pressed. If an output isn't available I need to add it probably since it is doing nothing.
 	
 ###What Was The Actual Solution
 
@@ -24,4 +24,4 @@
 	[x] - Needed to get a new brain in viewDidLoad and then it was able to calculate. It was called after a reset. Copied 'brain = [[CalculatorBrain alloc]init];'
 	[x] - add .0 in front of f in CalculatorBrain.m
 	[x] - This was solved with the zero displaying after the first operand was entered.
-	[x] - I was right!
+	[ ] - ...

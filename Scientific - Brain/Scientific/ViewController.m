@@ -40,15 +40,25 @@
 
 - (IBAction)operandTapped:(UIButton *)sender{
     
-    // FIX Needed to add output if this if statement is true
+    // How to handle decimals
     if ([sender.titleLabel.text isEqualToString:@"."]){
+        
+        if([self.displayLabel.text isEqualToString:@"0"]){
+        
         self.displayLabel.text = @"0.";
+        }else{
+            if(![self.displayLabel.text containsString:@"."]){
+                self.displayLabel.text = [self.displayLabel.text stringByAppendingString:sender.titleLabel.text];
+            }else{
+                // do nothing
+            }
+        }
     }
     
-    if ([self.displayLabel.text isEqualToString:@"0"])
+    if ([self.displayLabel.text isEqualToString:@"0"] && ![sender.titleLabel.text isEqualToString:@"."])
     {
         self.displayLabel.text = sender.titleLabel.text;
-    }else{
+    }
         
         if ([sender.titleLabel.text isEqualToString:@"."] && [self.displayLabel.text containsString:@"."]){
             // FIX Needed to add output if this if statement is true
@@ -62,7 +72,6 @@
             }
         }
     }
-}
 
 - (IBAction)additionTapped:(UIButton *)sender
 {
